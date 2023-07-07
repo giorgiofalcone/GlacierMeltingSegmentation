@@ -1,0 +1,29 @@
+model_opts:
+  name: "FPN"
+  args:
+    encoder_name: "densenet161"
+    encoder_weights: "imagenet"
+    in_channels: 6
+    classes: 2
+    encoder_depth: 5
+    decoder_dropout: 0.25
+    activation: "softmax"
+optim_opts:
+  name: "Adam"
+  args:
+    lr: 0.0001
+metrics_opts:
+  IoU:
+    threshold: 0.4
+  pixel_acc:
+    threshold: 0.4
+  precision:
+    threshold: 0.4
+  recall:
+    threshold: 0.4
+  dice:
+    threshold: 0.4
+log_opts:
+  mask_names: ["No Forest","Forest"]
+  reg_opts:
+    l1_reg: 0.0005
