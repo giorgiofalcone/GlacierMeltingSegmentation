@@ -1,0 +1,3821 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/WeatherOntology.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/WeatherOntology.owl"
+     versionIRI="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/weather/WeatherOntology_1.03.owl">
+    <Prefix name="" IRI="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/WeatherOntology.owl"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="time" IRI="http://www.w3.org/2006/time#"/>
+    <Prefix name="timezone" IRI="http://www.w3.org/2006/timezone#"/>
+    <Prefix name="wgs84_pos" IRI="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
+    <Prefix name="WeatherOntology" IRI="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/WeatherOntology.owl#"/>
+    <Import>http://www.w3.org/2006/time</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">smart home ontology for weather phenomena and exterior conditions</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal>1.03</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="wgs84_pos:Point"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wgs84_pos:SpatialThing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AboveRoomTemperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AboveZeroTemperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AirPollution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AiringWeatherState"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AtmosphericPressure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BelowOrZeroTemperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BelowRoomTemperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CloudCover"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CoolingWeatherState"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CurrentWeatherReport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CurrentWeatherReportFromSensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CurrentWeatherReportFromService"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DewPointTemperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DryHumidity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ExtremeFrost"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ExtremeHeat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FairWeatherState"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Forecast10HoursWeatherReport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Forecast11HoursWeatherReport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Forecast12HoursWeatherReport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Forecast13HoursWeatherReport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Forecast14HoursWeatherReport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Forecast15HoursWeatherReport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Forecast16HoursWeatherReport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Forecast17HoursWeatherReport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Forecast18HoursWeatherReport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Forecast19HoursWeatherReport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Forecast1HourWeatherReport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Forecast20HoursWeatherReport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Forecast21HoursWeatherReport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Forecast22HoursWeatherReport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Forecast23HoursWeatherReport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Forecast24HoursWeatherReport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Forecast2HoursWeatherReport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Forecast3HoursWeatherReport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Forecast4HoursWeatherReport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Forecast5HoursWeatherReport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Forecast6HoursWeatherReport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Forecast7HoursWeatherReport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Forecast8HoursWeatherReport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Forecast9HoursWeatherReport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ForecastWeatherReport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FreshBreeze"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FreshGale"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Frost"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GentleBreeze"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Heat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HeatingWeatherState"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HeavyPrecipitation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HighAirPollution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HighSolarIrradiance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HumidifyingWeatherState"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Humidity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hurricane"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LightAir"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LightBreeze"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LightPrecipitation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LightWind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LongRangeForecast"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LowAirPollution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LowSolarIrradiance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MediumAirPollution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MidRangeForecast"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModerateBreeze"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModerateGale"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModeratePrecipitation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ModerateSolarIrradiance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MoistHumidity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MostlyCloudy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NeglectibleSolarIrradiance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NeutralWeatherState"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NoCloudCover"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NoPrecipitation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NoWind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OptimumHumidity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Overcast"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PartlyCloudy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Precipitation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RainyWeatherState"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RoomTemperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SensorReportSource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ServiceReportSource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SevereWeatherState"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ShortRangeForecast"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SnowyWeatherState"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SolarIrradiance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Storm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StrongBreeze"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StrongGale"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StrongWind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SunnyWeatherState"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Temperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Thunderstorm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UnknownCloudCover"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VeryHighAirPollution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VeryLowAirPollution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ViolentStorm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WeatherCondition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WeatherPhenomenon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WeatherReport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WeatherReportFromSensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WeatherReportFromService"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WeatherReportSource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WeatherState"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WholeGale"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wind"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="wgs84_pos:location"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#belongsToWeatherState"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#createdAt"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAirPollution"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAssociatedSensor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAtmosphericPressure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCloudCover"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDewPointTemperature"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasExteriorTemperature"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasHumidity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasObservationTime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPrecipitation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSolarIrradiation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSource"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasWeatherCondition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasWeatherReport"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasWind"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSourceOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#reportsWeatherObservation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="wgs84_pos:alt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="wgs84_pos:lat"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="wgs84_pos:long"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCloudAltitude"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCloudCoverValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDirection"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasEndTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasIntensity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLatitude"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLongitude"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPriority"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSpeed"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasStartTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasUnit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasValue"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cloud"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fog"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hail"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LightCloud"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LightRainSun"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PartlyCloud"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rain"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sleet"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Snow"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sun"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Thunder"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://example.org/SORSontology#SatelliteImage"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#AboveRoomTemperature"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Temperature"/>
+            <ObjectUnionOf>
+                <ObjectIntersectionOf>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="#hasValue"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:decimal"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">25.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="#hasValue"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:decimal"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">30.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                </ObjectIntersectionOf>
+                <ObjectIntersectionOf>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="#hasValue"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:float"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">25.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="#hasValue"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:float"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">30.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#AboveZeroTemperature"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Temperature"/>
+            <ObjectUnionOf>
+                <ObjectIntersectionOf>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="#hasValue"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:decimal"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="#hasValue"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:decimal"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                </ObjectIntersectionOf>
+                <ObjectIntersectionOf>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="#hasValue"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:float"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="#hasValue"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:float"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">10.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#AirPollution"/>
+        <ObjectUnionOf>
+            <Class IRI="#HighAirPollution"/>
+            <Class IRI="#LowAirPollution"/>
+            <Class IRI="#MediumAirPollution"/>
+            <Class IRI="#VeryHighAirPollution"/>
+            <Class IRI="#VeryLowAirPollution"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#AiringWeatherState"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherState"/>
+            <ObjectComplementOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                    <Class IRI="#AboveRoomTemperature"/>
+                </ObjectSomeValuesFrom>
+            </ObjectComplementOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                <Class IRI="#NoPrecipitation"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                <ObjectUnionOf>
+                    <Class IRI="#LightWind"/>
+                    <Class IRI="#StrongWind"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BelowOrZeroTemperature"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Temperature"/>
+            <ObjectUnionOf>
+                <ObjectIntersectionOf>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="#hasValue"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:decimal"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">-5.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="#hasValue"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:decimal"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                </ObjectIntersectionOf>
+                <ObjectIntersectionOf>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="#hasValue"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:float"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">-5.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="#hasValue"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:float"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BelowRoomTemperature"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Temperature"/>
+            <ObjectUnionOf>
+                <ObjectIntersectionOf>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="#hasValue"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:decimal"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">10.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="#hasValue"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:decimal"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">20.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                </ObjectIntersectionOf>
+                <ObjectIntersectionOf>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="#hasValue"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:float"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">10.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="#hasValue"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:float"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">20.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#CloudCover"/>
+        <ObjectUnionOf>
+            <Class IRI="#MostlyCloudy"/>
+            <Class IRI="#NoCloudCover"/>
+            <Class IRI="#Overcast"/>
+            <Class IRI="#PartlyCloudy"/>
+            <Class IRI="#UnknownCloudCover"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#CoolingWeatherState"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherState"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                    <Class IRI="#AboveZeroTemperature"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                    <Class IRI="#BelowOrZeroTemperature"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                    <Class IRI="#BelowRoomTemperature"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                    <Class IRI="#ExtremeFrost"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                    <Class IRI="#Frost"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#CurrentWeatherReport"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataHasValue>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+                        </DataHasValue>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#CurrentWeatherReportFromSensor"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasSource"/>
+                <Class IRI="#SensorReportSource"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataHasValue>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+                        </DataHasValue>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#CurrentWeatherReportFromService"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasSource"/>
+                <Class IRI="#ServiceReportSource"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataHasValue>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+                        </DataHasValue>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#DryHumidity"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Humidity"/>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#hasValue"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">25.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ExtremeFrost"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Temperature"/>
+            <ObjectUnionOf>
+                <DataAllValuesFrom>
+                    <DataProperty IRI="#hasValue"/>
+                    <DatatypeRestriction>
+                        <Datatype abbreviatedIRI="xsd:decimal"/>
+                        <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">-25.0</Literal>
+                        </FacetRestriction>
+                    </DatatypeRestriction>
+                </DataAllValuesFrom>
+                <DataAllValuesFrom>
+                    <DataProperty IRI="#hasValue"/>
+                    <DatatypeRestriction>
+                        <Datatype abbreviatedIRI="xsd:float"/>
+                        <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">-25.0</Literal>
+                        </FacetRestriction>
+                    </DatatypeRestriction>
+                </DataAllValuesFrom>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ExtremeHeat"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Temperature"/>
+            <ObjectUnionOf>
+                <DataAllValuesFrom>
+                    <DataProperty IRI="#hasValue"/>
+                    <DatatypeRestriction>
+                        <Datatype abbreviatedIRI="xsd:decimal"/>
+                        <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">37.0</Literal>
+                        </FacetRestriction>
+                    </DatatypeRestriction>
+                </DataAllValuesFrom>
+                <DataAllValuesFrom>
+                    <DataProperty IRI="#hasValue"/>
+                    <DatatypeRestriction>
+                        <Datatype abbreviatedIRI="xsd:float"/>
+                        <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">37.0</Literal>
+                        </FacetRestriction>
+                    </DatatypeRestriction>
+                </DataAllValuesFrom>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FairWeatherState"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherState"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                <Class IRI="#NoPrecipitation"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                <ObjectUnionOf>
+                    <Class IRI="#LightWind"/>
+                    <Class IRI="#NoWind"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                <ObjectUnionOf>
+                    <Class IRI="#NoCloudCover"/>
+                    <Class IRI="#PartlyCloudy"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Forecast10HoursWeatherReport"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataHasValue>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10</Literal>
+                        </DataHasValue>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Forecast11HoursWeatherReport"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataHasValue>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">11</Literal>
+                        </DataHasValue>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Forecast12HoursWeatherReport"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataHasValue>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">12</Literal>
+                        </DataHasValue>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Forecast13HoursWeatherReport"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataHasValue>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">13</Literal>
+                        </DataHasValue>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Forecast14HoursWeatherReport"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataHasValue>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">14</Literal>
+                        </DataHasValue>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Forecast15HoursWeatherReport"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataHasValue>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">15</Literal>
+                        </DataHasValue>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Forecast16HoursWeatherReport"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataHasValue>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">16</Literal>
+                        </DataHasValue>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Forecast17HoursWeatherReport"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataHasValue>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">17</Literal>
+                        </DataHasValue>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Forecast18HoursWeatherReport"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataHasValue>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">18</Literal>
+                        </DataHasValue>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Forecast19HoursWeatherReport"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataHasValue>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">19</Literal>
+                        </DataHasValue>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Forecast1HourWeatherReport"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataHasValue>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+                        </DataHasValue>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Forecast20HoursWeatherReport"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataHasValue>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">20</Literal>
+                        </DataHasValue>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Forecast21HoursWeatherReport"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataHasValue>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">21</Literal>
+                        </DataHasValue>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Forecast22HoursWeatherReport"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataHasValue>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">22</Literal>
+                        </DataHasValue>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Forecast23HoursWeatherReport"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataHasValue>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">23</Literal>
+                        </DataHasValue>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Forecast24HoursWeatherReport"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataHasValue>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">24</Literal>
+                        </DataHasValue>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Forecast2HoursWeatherReport"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataHasValue>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+                        </DataHasValue>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Forecast3HoursWeatherReport"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataHasValue>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+                        </DataHasValue>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Forecast4HoursWeatherReport"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataHasValue>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+                        </DataHasValue>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Forecast5HoursWeatherReport"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataHasValue>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+                        </DataHasValue>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Forecast6HoursWeatherReport"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataHasValue>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+                        </DataHasValue>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Forecast7HoursWeatherReport"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataHasValue>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">7</Literal>
+                        </DataHasValue>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Forecast8HoursWeatherReport"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataHasValue>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">8</Literal>
+                        </DataHasValue>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Forecast9HoursWeatherReport"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataHasValue>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">9</Literal>
+                        </DataHasValue>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ForecastWeatherReport"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataSomeValuesFrom>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <DatatypeRestriction>
+                                <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+                                </FacetRestriction>
+                            </DatatypeRestriction>
+                        </DataSomeValuesFrom>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FreshBreeze"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Wind"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">7.9</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">10.7</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FreshGale"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Wind"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">17.1</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">20.7</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Frost"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Temperature"/>
+            <ObjectUnionOf>
+                <ObjectIntersectionOf>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="#hasValue"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:decimal"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">-25.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="#hasValue"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:decimal"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">-5.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                </ObjectIntersectionOf>
+                <ObjectIntersectionOf>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="#hasValue"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:float"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">-25.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="#hasValue"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:float"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">-5.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#GentleBreeze"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Wind"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">3.4</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">5.4</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Heat"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Temperature"/>
+            <ObjectUnionOf>
+                <ObjectIntersectionOf>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="#hasValue"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:decimal"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">30.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="#hasValue"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:decimal"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">37.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                </ObjectIntersectionOf>
+                <ObjectIntersectionOf>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="#hasValue"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:float"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">30.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="#hasValue"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:float"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">37.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#HeatingWeatherState"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherState"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                    <Class IRI="#AboveRoomTemperature"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                    <Class IRI="#ExtremeHeat"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                    <Class IRI="#Heat"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#HeavyPrecipitation"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Precipitation"/>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#hasIntensity"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#HighAirPollution"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#AirPollution"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasValue"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">75</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasValue"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">100</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#HighSolarIrradiance"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#SolarIrradiance"/>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#hasValue"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">500.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#HumidifyingWeatherState"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherState"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                <Class IRI="#MoistHumidity"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Humidity"/>
+        <ObjectUnionOf>
+            <Class IRI="#DryHumidity"/>
+            <Class IRI="#MoistHumidity"/>
+            <Class IRI="#OptimumHumidity"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Hurricane"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Wind"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">32.6</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#LightAir"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Wind"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.2</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1.5</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#LightBreeze"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Wind"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1.5</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">3.4</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#LightPrecipitation"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Precipitation"/>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#hasIntensity"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataAllValuesFrom>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#hasIntensity"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#LightWind"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Wind"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.2</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">10.7</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#LongRangeForecast"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataSomeValuesFrom>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <DatatypeRestriction>
+                                <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">12</Literal>
+                                </FacetRestriction>
+                            </DatatypeRestriction>
+                        </DataSomeValuesFrom>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataAllValuesFrom>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <DatatypeRestriction>
+                                <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">12</Literal>
+                                </FacetRestriction>
+                            </DatatypeRestriction>
+                        </DataAllValuesFrom>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#LowAirPollution"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#AirPollution"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasValue"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">25</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasValue"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#LowSolarIrradiance"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#SolarIrradiance"/>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#hasValue"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">50.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataAllValuesFrom>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#hasValue"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">250.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MediumAirPollution"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#AirPollution"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasValue"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasValue"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">75</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MidRangeForecast"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataSomeValuesFrom>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <DataIntersectionOf>
+                                <DatatypeRestriction>
+                                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+                                    </FacetRestriction>
+                                </DatatypeRestriction>
+                                <DatatypeRestriction>
+                                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">12</Literal>
+                                    </FacetRestriction>
+                                </DatatypeRestriction>
+                            </DataIntersectionOf>
+                        </DataSomeValuesFrom>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataAllValuesFrom>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <DataIntersectionOf>
+                                <DatatypeRestriction>
+                                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+                                    </FacetRestriction>
+                                </DatatypeRestriction>
+                                <DatatypeRestriction>
+                                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">12</Literal>
+                                    </FacetRestriction>
+                                </DatatypeRestriction>
+                            </DataIntersectionOf>
+                        </DataAllValuesFrom>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ModerateBreeze"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Wind"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">5.4</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">7.9</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ModerateGale"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Wind"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">13.8</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">17.1</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ModeratePrecipitation"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Precipitation"/>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#hasIntensity"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataAllValuesFrom>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#hasIntensity"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">4.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ModerateSolarIrradiance"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#SolarIrradiance"/>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#hasValue"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">250.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataAllValuesFrom>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#hasValue"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">500.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MoistHumidity"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Humidity"/>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#hasValue"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">60.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MostlyCloudy"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#CloudCover"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasCloudCoverValue"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasCloudCoverValue"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">8</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#NeglectibleSolarIrradiance"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#SolarIrradiance"/>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#hasValue"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataAllValuesFrom>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#hasValue"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">50.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#NeutralWeatherState"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherState"/>
+            <ObjectComplementOf>
+                <ObjectUnionOf>
+                    <Class IRI="#FairWeatherState"/>
+                    <Class IRI="#SevereWeatherState"/>
+                </ObjectUnionOf>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#NoCloudCover"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#CloudCover"/>
+            <DataHasValue>
+                <DataProperty IRI="#hasCloudCoverValue"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#NoPrecipitation"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Precipitation"/>
+            <DataHasValue>
+                <DataProperty IRI="#hasIntensity"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#NoWind"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Wind"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.2</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#OptimumHumidity"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Humidity"/>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#hasValue"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">25.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataAllValuesFrom>
+            <DataAllValuesFrom>
+                <DataProperty IRI="#hasValue"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">60.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Overcast"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#CloudCover"/>
+            <DataHasValue>
+                <DataProperty IRI="#hasCloudCoverValue"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">8</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PartlyCloudy"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#CloudCover"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasCloudCoverValue"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasCloudCoverValue"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Precipitation"/>
+        <ObjectUnionOf>
+            <Class IRI="#HeavyPrecipitation"/>
+            <Class IRI="#LightPrecipitation"/>
+            <Class IRI="#ModeratePrecipitation"/>
+            <Class IRI="#NoPrecipitation"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#RainyWeatherState"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherState"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                    <Class IRI="#AboveRoomTemperature"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                    <Class IRI="#AboveZeroTemperature"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                    <Class IRI="#BelowRoomTemperature"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                    <Class IRI="#ExtremeHeat"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                    <Class IRI="#Heat"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                    <Class IRI="#RoomTemperature"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+            <ObjectComplementOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                    <Class IRI="#NoPrecipitation"/>
+                </ObjectSomeValuesFrom>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#RoomTemperature"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Temperature"/>
+            <ObjectUnionOf>
+                <ObjectIntersectionOf>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="#hasValue"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:decimal"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">20.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="#hasValue"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:decimal"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">25.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                </ObjectIntersectionOf>
+                <ObjectIntersectionOf>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="#hasValue"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:float"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">20.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                    <DataAllValuesFrom>
+                        <DataProperty IRI="#hasValue"/>
+                        <DatatypeRestriction>
+                            <Datatype abbreviatedIRI="xsd:float"/>
+                            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">25.0</Literal>
+                            </FacetRestriction>
+                        </DatatypeRestriction>
+                    </DataAllValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SevereWeatherState"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherState"/>
+            <ObjectUnionOf>
+                <ObjectIntersectionOf>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                        <Class IRI="#HeavyPrecipitation"/>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                        <Class IRI="#StrongWind"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                    <Class IRI="#ExtremeFrost"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                    <Class IRI="#ExtremeHeat"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                    <Class IRI="#HeavyPrecipitation"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                    <Class IRI="#Storm"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ShortRangeForecast"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataSomeValuesFrom>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <DataIntersectionOf>
+                                <DatatypeRestriction>
+                                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+                                    </FacetRestriction>
+                                </DatatypeRestriction>
+                                <DatatypeRestriction>
+                                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+                                    </FacetRestriction>
+                                </DatatypeRestriction>
+                            </DataIntersectionOf>
+                        </DataSomeValuesFrom>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="time:hasBeginning"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="time:inDateTime"/>
+                        <DataAllValuesFrom>
+                            <DataProperty abbreviatedIRI="time:hour"/>
+                            <DataIntersectionOf>
+                                <DatatypeRestriction>
+                                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+                                    </FacetRestriction>
+                                </DatatypeRestriction>
+                                <DatatypeRestriction>
+                                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+                                    </FacetRestriction>
+                                </DatatypeRestriction>
+                            </DataIntersectionOf>
+                        </DataAllValuesFrom>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SnowyWeatherState"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherState"/>
+            <ObjectIntersectionOf>
+                <ObjectComplementOf>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                        <Class IRI="#NoPrecipitation"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectComplementOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                    <Class IRI="#BelowOrZeroTemperature"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                    <Class IRI="#Precipitation"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SolarIrradiance"/>
+        <ObjectUnionOf>
+            <Class IRI="#HighSolarIrradiance"/>
+            <Class IRI="#LowSolarIrradiance"/>
+            <Class IRI="#ModerateSolarIrradiance"/>
+            <Class IRI="#NeglectibleSolarIrradiance"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Storm"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Wind"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">24.4</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#StrongBreeze"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Wind"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">10.7</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">13.8</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#StrongGale"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Wind"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">20.7</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">24.4</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#StrongWind"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Wind"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">10.7</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">24.4</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SunnyWeatherState"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherState"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                <Class IRI="#HighSolarIrradiance"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                <Class IRI="#NoCloudCover"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                <Class IRI="#NoPrecipitation"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Thunderstorm"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherState"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                <Class IRI="#AboveZeroTemperature"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                <Class IRI="#HeavyPrecipitation"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+                <ObjectUnionOf>
+                    <Class IRI="#LightWind"/>
+                    <Class IRI="#Storm"/>
+                    <Class IRI="#StrongWind"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#UnknownCloudCover"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#CloudCover"/>
+            <DataHasValue>
+                <DataProperty IRI="#hasValue"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">9</Literal>
+            </DataHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#VeryHighAirPollution"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#AirPollution"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasValue"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">100</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#VeryLowAirPollution"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#AirPollution"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasValue"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasValue"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">25</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ViolentStorm"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Wind"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">28.4</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">32.6</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#WeatherCondition"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Cloud"/>
+            <NamedIndividual IRI="#Fog"/>
+            <NamedIndividual IRI="#Hail"/>
+            <NamedIndividual IRI="#LightCloud"/>
+            <NamedIndividual IRI="#LightRainSun"/>
+            <NamedIndividual IRI="#PartlyCloud"/>
+            <NamedIndividual IRI="#Rain"/>
+            <NamedIndividual IRI="#Sleet"/>
+            <NamedIndividual IRI="#Snow"/>
+            <NamedIndividual IRI="#Sun"/>
+            <NamedIndividual IRI="#Thunder"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#WeatherReportFromSensor"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasSource"/>
+                <Class IRI="#SensorReportSource"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#WeatherReportFromService"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#WeatherReport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasSource"/>
+                <Class IRI="#ServiceReportSource"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#WeatherReportSource"/>
+        <ObjectUnionOf>
+            <Class IRI="#SensorReportSource"/>
+            <Class IRI="#ServiceReportSource"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#WholeGale"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Wind"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">24.4</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSpeed"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">28.4</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Wind"/>
+        <ObjectUnionOf>
+            <Class IRI="#FreshBreeze"/>
+            <Class IRI="#FreshGale"/>
+            <Class IRI="#GentleBreeze"/>
+            <Class IRI="#Hurricane"/>
+            <Class IRI="#LightAir"/>
+            <Class IRI="#LightBreeze"/>
+            <Class IRI="#LightWind"/>
+            <Class IRI="#ModerateBreeze"/>
+            <Class IRI="#ModerateGale"/>
+            <Class IRI="#NoWind"/>
+            <Class IRI="#Storm"/>
+            <Class IRI="#StrongBreeze"/>
+            <Class IRI="#StrongGale"/>
+            <Class IRI="#StrongWind"/>
+            <Class IRI="#ViolentStorm"/>
+            <Class IRI="#WholeGale"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class abbreviatedIRI="wgs84_pos:Point"/>
+        <Class abbreviatedIRI="wgs84_pos:SpatialThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AirPollution"/>
+        <Class IRI="#WeatherPhenomenon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AirPollution"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AtmosphericPressure"/>
+        <Class IRI="#WeatherPhenomenon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AtmosphericPressure"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasValue"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CloudCover"/>
+        <Class IRI="#WeatherPhenomenon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CloudCover"/>
+        <ObjectIntersectionOf>
+            <DataExactCardinality cardinality="1">
+                <DataProperty IRI="#hasCloudCoverValue"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataExactCardinality>
+            <DataMaxCardinality cardinality="1">
+                <DataProperty IRI="#hasCloudAltitude"/>
+                <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+            </DataMaxCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DewPointTemperature"/>
+        <Class IRI="#WeatherPhenomenon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DewPointTemperature"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Humidity"/>
+        <Class IRI="#WeatherPhenomenon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Humidity"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ModerateSolarIrradiance"/>
+        <Class IRI="#SolarIrradiance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Precipitation"/>
+        <Class IRI="#WeatherPhenomenon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Precipitation"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasIntensity"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RainyWeatherState"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasWeatherCondition"/>
+            <NamedIndividual IRI="#Rain"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensorReportSource"/>
+        <Class IRI="#WeatherReportSource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensorReportSource"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAssociatedSensor"/>
+            <Class abbreviatedIRI="owl:Thing"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ServiceReportSource"/>
+        <Class IRI="#WeatherReportSource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SnowyWeatherState"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasWeatherCondition"/>
+            <NamedIndividual IRI="#Snow"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SolarIrradiance"/>
+        <Class IRI="#WeatherPhenomenon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SolarIrradiance"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SunnyWeatherState"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasWeatherCondition"/>
+            <NamedIndividual IRI="#Sun"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Temperature"/>
+        <Class IRI="#WeatherPhenomenon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Temperature"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Thunderstorm"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasWeatherCondition"/>
+            <NamedIndividual IRI="#Thunder"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeatherCondition"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeatherReport"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="wgs84_pos:location"/>
+            <Class abbreviatedIRI="wgs84_pos:Point"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeatherReport"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#createdAt"/>
+            <Class abbreviatedIRI="time:TemporalEntity"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeatherReport"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasSource"/>
+            <Class IRI="#WeatherReportSource"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeatherReport"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+            <Class abbreviatedIRI="time:Interval"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeatherReport"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#reportsWeatherObservation"/>
+            <Class IRI="#WeatherState"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeatherReport"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#hasPriority"/>
+            <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeatherState"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasWeatherCondition"/>
+            <Class IRI="#WeatherCondition"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeatherState"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasObservationTime"/>
+            <ObjectUnionOf>
+                <Class abbreviatedIRI="time:Instant"/>
+                <Class abbreviatedIRI="time:Interval"/>
+            </ObjectUnionOf>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeatherState"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+            <Class IRI="#AirPollution"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeatherState"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+            <Class IRI="#AtmosphericPressure"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeatherState"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+            <Class IRI="#CloudCover"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeatherState"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+            <Class IRI="#DewPointTemperature"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeatherState"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+            <Class IRI="#Humidity"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeatherState"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+            <Class IRI="#Precipitation"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeatherState"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+            <Class IRI="#SolarIrradiance"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WeatherState"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+            <Class IRI="#Wind"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wind"/>
+        <Class IRI="#WeatherPhenomenon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wind"/>
+        <ObjectIntersectionOf>
+            <DataExactCardinality cardinality="1">
+                <DataProperty IRI="#hasDirection"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">360.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataExactCardinality>
+            <DataExactCardinality cardinality="1">
+                <DataProperty IRI="#hasSpeed"/>
+                <Datatype abbreviatedIRI="xsd:float"/>
+            </DataExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#AirPollution"/>
+        <Class IRI="#AtmosphericPressure"/>
+        <Class IRI="#CloudCover"/>
+        <Class IRI="#DewPointTemperature"/>
+        <Class IRI="#Humidity"/>
+        <Class IRI="#Precipitation"/>
+        <Class IRI="#SolarIrradiance"/>
+        <Class IRI="#Temperature"/>
+        <Class IRI="#Wind"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CurrentWeatherReport"/>
+        <Class IRI="#ForecastWeatherReport"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DryHumidity"/>
+        <Class IRI="#MoistHumidity"/>
+        <Class IRI="#OptimumHumidity"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Forecast12HoursWeatherReport"/>
+        <Class IRI="#Forecast15HoursWeatherReport"/>
+        <Class IRI="#Forecast18HoursWeatherReport"/>
+        <Class IRI="#Forecast1HourWeatherReport"/>
+        <Class IRI="#Forecast21HoursWeatherReport"/>
+        <Class IRI="#Forecast24HoursWeatherReport"/>
+        <Class IRI="#Forecast2HoursWeatherReport"/>
+        <Class IRI="#Forecast3HoursWeatherReport"/>
+        <Class IRI="#Forecast6HoursWeatherReport"/>
+        <Class IRI="#Forecast9HoursWeatherReport"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#HeavyPrecipitation"/>
+        <Class IRI="#LightPrecipitation"/>
+        <Class IRI="#ModeratePrecipitation"/>
+        <Class IRI="#NoPrecipitation"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#HighAirPollution"/>
+        <Class IRI="#LowAirPollution"/>
+        <Class IRI="#MediumAirPollution"/>
+        <Class IRI="#VeryHighAirPollution"/>
+        <Class IRI="#VeryLowAirPollution"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#HighSolarIrradiance"/>
+        <Class IRI="#LowSolarIrradiance"/>
+        <Class IRI="#ModerateSolarIrradiance"/>
+        <Class IRI="#NeglectibleSolarIrradiance"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#LightWind"/>
+        <Class IRI="#NoWind"/>
+        <Class IRI="#Storm"/>
+        <Class IRI="#StrongWind"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#MostlyCloudy"/>
+        <Class IRI="#NoCloudCover"/>
+        <Class IRI="#Overcast"/>
+        <Class IRI="#PartlyCloudy"/>
+        <Class IRI="#UnknownCloudCover"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#SensorReportSource"/>
+        <Class IRI="#ServiceReportSource"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#WeatherCondition"/>
+        <Class IRI="#WeatherPhenomenon"/>
+        <Class IRI="#WeatherReport"/>
+        <Class IRI="#WeatherReportSource"/>
+        <Class IRI="#WeatherState"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#WeatherCondition"/>
+        <NamedIndividual IRI="#Cloud"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeatherCondition"/>
+        <NamedIndividual IRI="#Fog"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeatherCondition"/>
+        <NamedIndividual IRI="#Hail"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeatherCondition"/>
+        <NamedIndividual IRI="#LightCloud"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeatherCondition"/>
+        <NamedIndividual IRI="#LightRainSun"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeatherCondition"/>
+        <NamedIndividual IRI="#PartlyCloud"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeatherCondition"/>
+        <NamedIndividual IRI="#Rain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeatherCondition"/>
+        <NamedIndividual IRI="#Sleet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeatherCondition"/>
+        <NamedIndividual IRI="#Snow"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeatherCondition"/>
+        <NamedIndividual IRI="#Sun"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WeatherCondition"/>
+        <NamedIndividual IRI="#Thunder"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAirPollution"/>
+        <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAtmosphericPressure"/>
+        <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCloudCover"/>
+        <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDewPointTemperature"/>
+        <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasExteriorTemperature"/>
+        <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasHumidity"/>
+        <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasPrecipitation"/>
+        <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSolarIrradiation"/>
+        <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasWind"/>
+        <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isSourceOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#reportsWeatherObservation"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#belongsToWeatherState"/>
+        <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasSource"/>
+        <ObjectProperty IRI="#isSourceOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasWeatherReport"/>
+        <ObjectProperty IRI="#reportsWeatherObservation"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#belongsToWeatherState"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasAirPollution"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasAtmosphericPressure"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasCloudCover"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasDewPointTemperature"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasExteriorTemperature"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasHumidity"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasPrecipitation"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasSolarIrradiation"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasWeatherCondition"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasWind"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#reportsWeatherObservation"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#hasWeatherReport"/>
+    </InverseFunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#createdAt"/>
+        <Class IRI="#WeatherReport"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAirPollution"/>
+        <Class IRI="#WeatherState"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAssociatedSensor"/>
+        <Class IRI="#SensorReportSource"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAtmosphericPressure"/>
+        <Class IRI="#WeatherState"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCloudCover"/>
+        <Class IRI="#WeatherState"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDewPointTemperature"/>
+        <Class IRI="#WeatherState"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasExteriorTemperature"/>
+        <Class IRI="#WeatherState"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasHumidity"/>
+        <Class IRI="#WeatherState"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasObservationTime"/>
+        <ObjectUnionOf>
+            <Class IRI="http://example.org/SORSontology#SatelliteImage"/>
+            <Class IRI="#WeatherState"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPrecipitation"/>
+        <Class IRI="#WeatherState"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSolarIrradiation"/>
+        <Class IRI="#WeatherState"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSource"/>
+        <Class IRI="#WeatherReport"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasWeatherCondition"/>
+        <Class IRI="#WeatherState"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+        <Class IRI="#WeatherState"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasWeatherReport"/>
+        <Class IRI="#WeatherState"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasWind"/>
+        <Class IRI="#WeatherState"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+        <Class IRI="#WeatherReport"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="wgs84_pos:location"/>
+        <Class abbreviatedIRI="wgs84_pos:SpatialThing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#createdAt"/>
+        <Class abbreviatedIRI="time:TemporalEntity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAirPollution"/>
+        <Class IRI="#AirPollution"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAtmosphericPressure"/>
+        <Class IRI="#AtmosphericPressure"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCloudCover"/>
+        <Class IRI="#CloudCover"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDewPointTemperature"/>
+        <Class IRI="#DewPointTemperature"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasExteriorTemperature"/>
+        <Class IRI="#Temperature"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasHumidity"/>
+        <Class IRI="#Humidity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasObservationTime"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="time:Instant"/>
+            <Class abbreviatedIRI="time:Interval"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPrecipitation"/>
+        <Class IRI="#Precipitation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSolarIrradiation"/>
+        <Class IRI="#SolarIrradiance"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSource"/>
+        <Class IRI="#WeatherReportSource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasWeatherCondition"/>
+        <Class IRI="#WeatherCondition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasWeatherPhenomenon"/>
+        <Class IRI="#WeatherPhenomenon"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasWeatherReport"/>
+        <Class IRI="#WeatherReport"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasWind"/>
+        <Class IRI="#Wind"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#reportsWeatherForTimeInterval"/>
+        <Class abbreviatedIRI="time:Interval"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasCloudAltitude"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasCloudCoverValue"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasDirection"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasEndTime"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasLatitude"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasLongitude"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasSpeed"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasStartTime"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasTime"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasValue"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="wgs84_pos:alt"/>
+        <Class abbreviatedIRI="wgs84_pos:SpatialThing"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="wgs84_pos:lat"/>
+        <Class abbreviatedIRI="wgs84_pos:SpatialThing"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="wgs84_pos:long"/>
+        <Class abbreviatedIRI="wgs84_pos:SpatialThing"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCloudAltitude"/>
+        <ObjectUnionOf>
+            <Class IRI="#CloudCover"/>
+            <Class IRI="#WeatherState"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCloudCoverValue"/>
+        <Class IRI="#CloudCover"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDirection"/>
+        <Class IRI="#Wind"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasEndTime"/>
+        <Class abbreviatedIRI="time:Interval"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasIntensity"/>
+        <Class IRI="#Precipitation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLatitude"/>
+        <Class IRI="#WeatherState"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLongitude"/>
+        <Class IRI="#WeatherState"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasPriority"/>
+        <Class IRI="#WeatherReport"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSpeed"/>
+        <Class IRI="#Wind"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasStartTime"/>
+        <Class abbreviatedIRI="time:Interval"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasTime"/>
+        <Class abbreviatedIRI="time:Instant"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasCloudAltitude"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasCloudCoverValue"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDirection"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:float"/>
+            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">360.0</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasEndTime"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasIntensity"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLatitude"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:float"/>
+            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">-90.0</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLatitude"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:float"/>
+            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">90.0</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLongitude"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:float"/>
+            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">-180.0</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLongitude"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:float"/>
+            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">180.0</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasPriority"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSpeed"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasStartTime"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasTime"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>wgs84_pos:Point</AbbreviatedIRI>
+        <Literal xml:lang="en"> 
+Uniquely identified by lat/long/alt. i.e.
+
+spaciallyIntersects(P1, P2) :- lat(P1, LAT), long(P1, LONG), alt(P1, ALT),
+  lat(P2, LAT), long(P2, LONG), alt(P2, ALT).
+
+sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P2).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>wgs84_pos:Point</AbbreviatedIRI>
+        <Literal xml:lang="en">A point, typically described using a coordinate system relative to Earth, such as WGS84.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wgs84_pos:Point</AbbreviatedIRI>
+        <Literal>point</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>wgs84_pos:SpatialThing</AbbreviatedIRI>
+        <Literal xml:lang="en">Anything with spatial extent, i.e. size, shape, or position.
+ e.g. people, places, bowling balls, as well as abstract areas like cubes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wgs84_pos:SpatialThing</AbbreviatedIRI>
+        <Literal>SpatialThing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>wgs84_pos:alt</AbbreviatedIRI>
+        <Literal xml:lang="en">The WGS84 altitude of a SpatialThing (decimal meters 
+above the local reference ellipsoid).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>wgs84_pos:alt</AbbreviatedIRI>
+        <Literal xml:lang="en">altitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>wgs84_pos:lat</AbbreviatedIRI>
+        <Literal xml:lang="en">The WGS84 latitude of a SpatialThing (decimal degrees).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wgs84_pos:lat</AbbreviatedIRI>
+        <Literal>latitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>wgs84_pos:location</AbbreviatedIRI>
+        <Literal xml:lang="en">The relation between something and the point, 
+ or other geometrical thing in space, where it is.  For example, the realtionship between
+ a radio tower and a Point with a given lat and long.
+ Or a relationship between a park and its outline as a closed arc of points, or a road and
+ its location as a arc (a sequence of points).
+ Clearly in practice there will be limit to the accuracy of any such statement, but one would expect
+ an accuracy appropriate for the size of the object and uses such as mapping .</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wgs84_pos:location</AbbreviatedIRI>
+        <Literal>location</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>wgs84_pos:long</AbbreviatedIRI>
+        <Literal xml:lang="en">The WGS84 longitude of a SpatialThing (decimal degrees)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wgs84_pos:long</AbbreviatedIRI>
+        <Literal>longitude</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AirPollution</IRI>
+        <Literal xml:lang="en">the current air pollution represented as European Air Quality Index value. The index value is based on 3 pollutants of major concern in Europe: PM10, NO2, O3 and will be able to take into account to 3 additional pollutants (CO, PM2.5 and SO2) where data are also available.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AiringWeatherState</IRI>
+        <Literal xml:lang="en"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AtmosphericPressure</IRI>
+        <Literal xml:lang="en">atmospheric pressure in hectopascal (hPa)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CloudCover</IRI>
+        <Literal xml:lang="en">clound cover in the unit &quot;Okta&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DewPointTemperature</IRI>
+        <Literal xml:lang="en">The dewpoint temperature in degrees Celsius. It is the temperature at which the air can no longer hold all of its water vapor, and some of the water vapor must condense into liquid water. The dew point is always lower than (or equal to) the air temperature.
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DewPointTemperature</IRI>
+        <Literal xml:lang="en">this concept was known as &quot;DewPoint&quot; in prior versions of the ontology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HighSolarIrradiance</IRI>
+        <Literal xml:lang="en">this concept was known as &quot;HighSolarRadiation&quot; in prior versions of the ontology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Humidity</IRI>
+        <Literal xml:lang="en">represents the relative humidity of the air in percent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LowSolarIrradiance</IRI>
+        <Literal xml:lang="en">this concept was known as &quot;LowSolarRadiation&quot; in prior versions of the ontology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ModeratePrecipitation</IRI>
+        <Literal xml:lang="en">this concept was known as &quot;MediumPrecipitation&quot; in prior versions of the ontology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NeglectibleSolarIrradiance</IRI>
+        <Literal xml:lang="en">this concept was known as &quot;NeglectibleSolarRadiation&quot; in prior versions of the ontology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Precipitation</IRI>
+        <Literal xml:lang="en">represents precipitation in millimetres</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SensorReportSource</IRI>
+        <Literal xml:lang="en">this class was known as &quot;SensorSource&quot; in prior versions of the ontology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ServiceReportSource</IRI>
+        <Literal xml:lang="en">this class was known as &quot;ServiceSource&quot; in prior versions of the ontology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SolarIrradiance</IRI>
+        <Literal xml:lang="en">measurement of solar irrradiation at a specific location in Watts per square meter (W/m²)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SolarIrradiance</IRI>
+        <Literal xml:lang="en">this concept was known as &quot;SolarRadiation&quot; in prior versions of the ontology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Temperature</IRI>
+        <Literal xml:lang="en">exterior temperature in degrees Celsius</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WeatherCondition</IRI>
+        <Literal xml:lang="en">One-word description of the observed weather condition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WeatherPhenomenon</IRI>
+        <Literal xml:lang="en">different weather phenomena that may influence the current and forecasted weather state.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WeatherReport</IRI>
+        <Literal xml:lang="en">a weather report that can be retrieved through a local sensor (e.g. weather station integrated in the smart home) or a remote internet service. Further a time division has been realized to differentiate between current, short, mid and long term forecasts. 
+
+For the smart home domain, a time window of 24 hours for weather forecasts has been seen as suitable with a 24 hours forecast being classified as long-term forecast</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WeatherReportSource</IRI>
+        <Literal xml:lang="en">Holds information about the origins of weather reports</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WeatherState</IRI>
+        <Literal xml:lang="en">Describes the actual weather reported through information from the weather source.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Wind</IRI>
+        <Literal xml:lang="en">Unit of wind direction is degrees 
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Wind</IRI>
+        <Literal xml:lang="en">Unit of wind speed in metres per second (m/s).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Wind</IRI>
+        <Literal xml:lang="en">Wind direction and speed are represented as datatype properties&quot;hasDirection&quot; and &quot;hasSpeed&quot;
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#belongsToWeatherState</IRI>
+        <Literal xml:lang="en">this property was known as &quot;belongsToState&quot; in prior versions of the ontology</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#createdAt</IRI>
+        <Literal xml:lang="en">The instant at which a weather report is created</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasDirection</IRI>
+        <Literal xml:lang="en">Wind direction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasDirection</IRI>
+        <Literal xml:lang="en">Wind direction represented in degrees</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasObservationTime</IRI>
+        <Literal xml:lang="en">Denotes the time a weather state has been observed or is forecasted for.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasSource</IRI>
+        <Literal xml:lang="en">links a weather report to the reporting source, either an internet weather service or a local weather sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasSpeed</IRI>
+        <Literal xml:lang="en">Wind speed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasSpeed</IRI>
+        <Literal xml:lang="en">wind speed in metres per second (m/s)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasWeatherCondition</IRI>
+        <Literal xml:lang="en">relation of weather states and a one-word description for the observed weather situation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasWeatherPhenomenon</IRI>
+        <Literal xml:lang="en">Relation between weather states and the phenomena that are observed or forecasted</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasWeatherReport</IRI>
+        <Literal xml:lang="en">a specific weather state is reported for a location by a weather report.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#reportsWeatherForTimeInterval</IRI>
+        <Literal xml:lang="en">this property describes an interval that denotes the time in the future (offset) for which the weather is reported</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
