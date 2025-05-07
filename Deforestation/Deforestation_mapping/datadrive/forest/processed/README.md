@@ -1,0 +1,3 @@
+This directory contains the dataset already split according to the baseline and the results of segmentation networks predictions.
+
+Because of the dataset size, it could not be uploaded. The name of the dataset is "Amazon and Atlantic Forest image datasets for semantic segmentation" and it is available online through the platform Zenodo: [Amazon and Atlantic Forest image datasets for semantic segmentation](https://zenodo.org/records/4498086)
