@@ -3,4 +3,4 @@ Breif explaination of folders:
 
 - Ontology: this directory contains the SORSOntology owl file (plus sosa and WeatherOntology ontologies). Moreover, there are some Python files used to populate ontology, querying on it and reasoning on it.
 
-- APP: this directory contains the web application created.
+- APP: this directory contains the created web application (both for Glacier and Forest segmentation).
